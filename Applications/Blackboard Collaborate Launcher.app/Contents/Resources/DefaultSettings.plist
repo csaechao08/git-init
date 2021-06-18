@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProxyType</key>
+	<integer>3</integer>
+	<key>ProxySame</key>
+	<false/>
+	<key>ProxyAutoURL</key>
+	<string></string>
+	<key>ProxyBypassList</key>
+	<string></string>
+	<key>ProxyBypassLocal</key>
+	<false/>
+	<key>ProxyHttpHost</key>
+	<string></string>
+	<key>ProxyHttpPort</key>
+	<string></string>
+	<key>ProxyHttpsHost</key>
+	<string></string>
+	<key>ProxyHttpsPort</key>
+	<string></string>
+	<key>ProxyFtpHost</key>
+	<string></string>
+	<key>ProxyFtpPort</key>
+	<string></string>
+	<key>ProxySocksHost</key>
+	<string></string>
+	<key>ProxySocksPort</key>
+	<string></string>
+	<key>ProxyOverrideHosts</key>
+	<string></string>
+	<key>ExceptionSites</key>
+	<array>
+		<string>https://na-downloads.elluminate.com</string>
+	</array>
+	<key>ConsoleStartupMode</key>
+	<string>HIDE</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://na-downloads.elluminate.com/bcl/appcast.xml</string>
+</dict>
+</plist>

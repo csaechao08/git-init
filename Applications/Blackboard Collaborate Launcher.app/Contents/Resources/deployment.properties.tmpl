@@ -1,0 +1,125 @@
+#
+# http://docs.oracle.com/javase/7/docs/technotes/guides/deployment/deployment-guide/properties.html
+#
+
+# attempt to disable auto-update/security baseline settings voodoo
+deployment.baseline.url.locked = true
+deployment.javaws.installURL.locked = true
+deployment.javaws.autodownload.locked = true
+deployment.expiration.decision.locked = true
+deployment.expiration.decision.suppression.locked = true
+deployment.webjava.enabled.locked = true
+
+deployment.baseline.url =
+deployment.javaws.installURL =
+deployment.javaws.autodownload = NEVER
+deployment.expiration.decision = NEVER
+deployment.expiration.decision.suppression = true
+deployment.macosx.check.update.locked
+deployment.macosx.check.update=false
+
+## always allow java webstart (tied to the pref Enable Java Content in the Browser)
+deployment.webjava.enabled = true
+
+# console
+deployment.console.startup.mode.locked = true
+deployment.console.startup.mode = %CONSOLE_MODE%
+
+# proxy settings
+## if we don't declare these proprties as 'locked', they may be overridden by the system settings
+deployment.proxy.type.locked = true
+deployment.proxy.same.locked = true 
+deployment.proxy.auto.config.url.locked = true
+deployment.proxy.bypass.list.locked = true
+deployment.proxy.bypass.local.locked = true
+deployment.proxy.http.host.locked = true
+deployment.proxy.http.port.locked = true
+deployment.proxy.https.host.locked = true
+deployment.proxy.https.port.locked = true
+deployment.proxy.ftp.host.locked = true
+deployment.proxy.ftp.port.locked = true
+deployment.proxy.socks.host.locked = true
+deployment.proxy.socks.port.locked = true
+
+deployment.proxy.type = %PROXY_TYPE%
+deployment.proxy.same = %PROXY_SAME%
+deployment.proxy.auto.config.url = %PROXY_CONFIG_URL%
+deployment.proxy.bypass.list = %PROXY_BYPASS_LIST%
+deployment.proxy.bypass.local = %PROXY_BYPASS_LOCAL%
+deployment.proxy.http.host = %PROXY_HTTP_HOST%
+deployment.proxy.http.port = %PROXY_HTTP_PORT%
+deployment.proxy.https.host = %PROXY_HTTPS_HOST%
+deployment.proxy.https.port = %PROXY_HTTPS_PORT%
+deployment.proxy.ftp.host = %PROXY_FTP_HOST%
+deployment.proxy.ftp.port = %PROXY_FTP_PORT%
+deployment.proxy.socks.host = %PROXY_SOCKS_HOST%
+deployment.proxy.socks.port = %PROXY_SOCKS_PORT%
+deployment.proxy.override.hosts = %PROXY_OVERRIDE_HOSTS%
+
+# cache settings
+deployment.javapi.cache.enabled.locked = true
+deployment.cache.max.size.locked = true
+deployment.cache.jarcompression.locked = true
+
+## deployment.cache.max.size below, -1 is unlimited. We use the system Cache dir, system will clean up as necessary
+deployment.cache.max.size = -1
+deployment.cache.jarcompression = 0
+## deployment.javapi.cache.enabled below is strange - "false means it should not be disabled" say the docs
+deployment.javapi.cache.enabled = false
+
+# various directories
+deployment.user.cachedir.locked = true
+deployment.user.extdir.locked = true
+deployment.user.logdir.locked = true
+deployment.user.tmp.locked = true
+
+deployment.user.cachedir = %USER_CACHE_DIR%
+deployment.user.extdir = %USER_APP_SUPPORT_DIR%/deployment/ext
+deployment.user.logdir = %USER_APP_SUPPORT_DIR%/deployment/log
+deployment.user.tmp = %USER_APP_SUPPORT_DIR%/deployment/tmp
+
+# security
+deployment.user.security.blacklist.locked = true
+deployment.user.security.blacklist.dynamic.locked = true
+deployment.user.security.blacklisted.certs.locked = true
+deployment.user.security.exception.sites = %EXCEPTION_SITES_FILE_LOCATION%
+deployment.system.security.blacklist.locked = true
+deployment.system.security.cacerts.locked = true
+deployment.system.security.jssecacerts.locked = true
+deployment.system.security.oldcacerts.locked = true
+deployment.system.security.oldjssecacerts.locked = true
+deployment.user.security.policy.locked = true
+deployment.user.security.sandbox.certs.locked = true
+deployment.user.security.saved.credentials.locked = true
+deployment.user.security.trusted.cacerts.locked = true
+deployment.user.security.trusted.certs.locked = true
+deployment.user.security.trusted.clientauthcerts.locked = true
+deployment.user.security.trusted.jssecacerts.locked = true
+deployment.user.security.trusted.jssecerts.locked = true
+deployment.user.security.trusted.libraries.locked = true
+
+deployment.user.security.blacklist = %BUNDLED_JRE_HOME%/lib/security/blacklist
+deployment.user.security.policy = %BUNDLED_JRE_HOME%/lib/security/java.policy
+
+deployment.system.security.blacklist = %BUNDLED_JRE_HOME%/lib/security/blacklist
+deployment.system.security.cacerts = %BUNDLED_JRE_HOME%/lib/security/cacerts
+deployment.system.security.jssecacerts = %BUNDLED_JRE_HOME%/lib/security/jssecacerts
+deployment.system.security.oldcacerts = %BUNDLED_JRE_HOME%/lib/security/cacerts
+deployment.system.security.oldjssecacerts = %BUNDLED_JRE_HOME%/lib/security/jssecacerts
+
+# the following should be in a user-writable location as these files may be dynamically updated
+# by user action or java's blacklisting system
+
+deployment.user.security.blacklist.dynamic = %USER_APP_SUPPORT_DIR%/security/blacklist.dynamic
+deployment.user.security.blacklisted.certs = %USER_APP_SUPPORT_DIR%/security/blacklisted.certs
+deployment.user.security.sandbox.certs = %USER_APP_SUPPORT_DIR%/security/sandbox.certs
+deployment.user.security.saved.credentials = %USER_APP_SUPPORT_DIR%/security/auth.dat
+deployment.user.security.trusted.cacerts = %USER_APP_SUPPORT_DIR%/security/trusted.cacerts
+deployment.user.security.trusted.certs = %USER_APP_SUPPORT_DIR%/security/trusted.certs
+deployment.user.security.trusted.clientauthcerts = %USER_APP_SUPPORT_DIR%/security/trusted.clientcerts
+deployment.user.security.trusted.jssecacerts = %USER_APP_SUPPORT_DIR%/security/trusted.jssecacerts
+deployment.user.security.trusted.jssecerts = %USER_APP_SUPPORT_DIR%/security/trusted.jssecerts
+deployment.user.security.trusted.libraries = %USER_APP_SUPPORT_DIR%/security/trusted.libraries
+
+# this "should" disable the JRE update check
+deployment.expiration.check.enabled = false
